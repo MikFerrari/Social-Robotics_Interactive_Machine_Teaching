@@ -13,7 +13,7 @@ classdef Human_agent
         count_negative = 0;
 
         decrement = 0.1;
-        reverse_thresh = 0.95;
+        reverse_thresh = 0.8;
     end
     
 
@@ -72,10 +72,10 @@ classdef Human_agent
                 % Handle response
                 switch answer
                     case 'Positive'
-                        disp([answer ': The sample belongs to the POSITIVE class'])
+                        disp([answer ' The sample belongs to the POSITIVE class'])
                         label_prob = 1;
                     case 'Negative'
-                        disp([answer ': The sample belongs to the NEGATIVE class'])
+                        disp([answer ' The sample belongs to the NEGATIVE class'])
                         label_prob = 0;
                 end
 
@@ -107,7 +107,7 @@ classdef Human_agent
 
 
         function label_prob = teacher_response(obj,input)
-            switch obj.response_type
+            switch obj.optimality
                 case "Infallible"
                     label_prob = response_exact(obj,input);
                 case "Fallible"
