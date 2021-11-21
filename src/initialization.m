@@ -7,3 +7,5 @@ iter_errors = [];
 
 iter = 0;
 thresh = input_space(1); % Arbitrary initial guess of the threshold
+
+failure = false;
