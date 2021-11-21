@@ -4,7 +4,7 @@ classdef Human_agent
     properties
         response_type   % Infallible, Fallible or Manual response
         optimality      % Optimal, Seed, Naive, Manual
-        deterministic = true   % True or False
+        deterministic = true;   % True or False
         true_threshold
         distr_mu
         distr_sigma
